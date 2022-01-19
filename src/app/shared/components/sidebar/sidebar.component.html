@@ -2,6 +2,37 @@
     <mat-sidenav #sidenav class="app-sidenav mat-elevation-z10" [opened]="!isScreenSmall"
         [mode]="isScreenSmall ? 'over' : 'side'">
         <mat-toolbar color="primary">Contacts</mat-toolbar>
+
+        <mat-nav-list>
+            <div mat-subheader>Standard</div>
+            <mat-list-item>
+                <a class="link-icon" matLine>
+                    <mat-icon mat-list-icon>dashboard</mat-icon>
+                    Dashboard
+                </a>
+            </mat-list-item>
+            <mat-list-item>
+                <a class="link-icon" matLine>
+                    <mat-icon mat-list-icon>face</mat-icon>
+                    UI
+                </a>
+            </mat-list-item>
+            <mat-list-item>
+                <a class="link-icon" matLine>
+                    <mat-icon mat-list-icon>show_chart</mat-icon>
+                    Charts
+                </a>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+
+            <div mat-subheader>Administrator</div>
+            <mat-list-item>
+                <a class="link-icon" matLine>
+                    <mat-icon mat-list-icon>email</mat-icon>
+                    Email
+                </a>
+            </mat-list-item>
+        </mat-nav-list>
     </mat-sidenav>
 
     <mat-sidenav-content class="app-sidenav-content">
