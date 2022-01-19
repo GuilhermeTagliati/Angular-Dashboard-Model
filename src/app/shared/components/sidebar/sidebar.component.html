@@ -1,1 +1,13 @@
-<p>sidebar works!</p>
+<mat-sidenav-container class="app-sidenav-container">
+    <mat-sidenav #sidenav class="app-sidenav mat-elevation-z10" [opened]="!isScreenSmall"
+        [mode]="isScreenSmall ? 'over' : 'side'">
+        <mat-toolbar color="primary">Contacts</mat-toolbar>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="app-sidenav-content">
+        <app-navbar (toggleSidenav)="sidenav.toggle()"></app-navbar>
+        <div class="wrapper">
+            <!-- <router-outlet></router-outlet> -->
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

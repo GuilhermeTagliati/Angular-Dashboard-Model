@@ -85,7 +85,6 @@ const MODULES_ARRAY = [
 
 @NgModule({
   declarations: [],
-  imports: MODULES_ARRAY,
   exports: MODULES_ARRAY
 })
 export class MaterialModule { }
