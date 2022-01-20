@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../shared/material.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
 import { DashViewComponent } from './view/dash-view/dash-view.component';
 
@@ -22,7 +22,8 @@ const ROUTES: Routes = [
   ],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    RouterModule.forChild(ROUTES)
   ]
 })
 export class DashboardModule { }

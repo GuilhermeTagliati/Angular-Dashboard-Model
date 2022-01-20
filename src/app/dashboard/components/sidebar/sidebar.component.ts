@@ -15,19 +15,19 @@ export class SidebarComponent implements OnInit {
   public isScreenSmall!: boolean;
   //#endregion
 
-  constructor(private breakpointObserver: BreakpointObserver) { }
+  constructor(private breakpointObserver: BreakpointObserver, private router: Router) { }
 
   ngOnInit(): void {
     this.breakpointObserver.observe([Breakpoints.Small]).subscribe({
       next: (state: BreakpointState) => this.isScreenSmall = state.matches
     });
 
-    // this.router.events.subscribe({
-    //   complete: () => {
-    //     if (this.isScreenSmall)
-    //       this.sidenav.close();
-    //   }
-    // })
+    this.router.events.subscribe({
+      complete: () => {
+        if (this.isScreenSmall)
+          this.sidenav.close();
+      }
+    });
   }
 
 

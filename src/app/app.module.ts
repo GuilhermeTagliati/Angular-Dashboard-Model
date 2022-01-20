@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
 
 const ROUTES: Routes = [
   { path: 'dashboard', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule) },
-  { path: '*', redirectTo: 'dashboard' }
+  { path: '**', redirectTo: 'dashboard' },
 ]
 
 @NgModule({
